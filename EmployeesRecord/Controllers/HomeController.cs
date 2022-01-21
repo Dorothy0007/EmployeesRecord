@@ -14,9 +14,8 @@ namespace EmployeesRecord.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, EmployeeRecordDbContext db)
+        public HomeController(ILogger<HomeController> logger)
         {
-            
             _logger = logger;
         }
 

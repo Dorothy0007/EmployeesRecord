@@ -6,6 +6,11 @@ namespace EmployeesRecord.DAL
 {
     public class EmployeeRecordDbContext : DbContext
     {
+        public EmployeeRecordDbContext(DbContextOptions<EmployeeRecordDbContext> options) : base(options) { }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
+        public DbSet<Section> Sections { get; set; }
         public EmployeeRecordDbContext()
         {
 
@@ -78,10 +83,6 @@ namespace EmployeesRecord.DAL
                     ContactId = 2
                 });
         }
-        public EmployeeRecordDbContext(DbContextOptions<EmployeeRecordDbContext> options) : base(options) { }
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Organization> Organizations { get; set; }
-        public DbSet<Section> Sections { get; set; }
+
     }
 }
